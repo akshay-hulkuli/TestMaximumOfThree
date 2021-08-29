@@ -2,7 +2,19 @@ package com.bridgelabz.testmaximum;
 
 import java.util.Scanner;
 
-public class TestMaximumOfThree {
+public class TestMaximumOfThree<E extends Comparable<E>> {
+	
+	E data1, data2, data3;
+	
+	public TestMaximumOfThree(E data1, E data2, E data3) {
+		this.data1 = data1;
+		this.data2 = data2;
+		this.data3 = data3;
+	}
+	
+	public E maximum() {
+		return findMax(data1, data2, data3);
+	}
 	
 	private static <E extends Comparable<E>> E findMax(E data1, E data2, E data3) {
 		E max = data1;
@@ -25,17 +37,17 @@ public class TestMaximumOfThree {
 			switch(sc.nextInt()) {
 				case 1:
 					System.out.println("Enter 3 integers");
-					int maxInt = findMax(sc.nextInt(),sc.nextInt(),sc.nextInt());
+					Integer maxInt = new TestMaximumOfThree<Integer>(sc.nextInt(),sc.nextInt(),sc.nextInt()).maximum();
 					System.out.println("the maximum integer is :"+maxInt);
 					break;
 				case 2:
 					System.out.println("Enter 3 Floating point numbers");
-					Float maxFloat = findMax(sc.nextFloat(),sc.nextFloat(),sc.nextFloat());
+					Float maxFloat = new TestMaximumOfThree<Float>(sc.nextFloat(),sc.nextFloat(),sc.nextFloat()).maximum();
 					System.out.println("the maximum Floating point numbers is :"+maxFloat);
 					break;
 				case 3:
 					System.out.println("Enter 3 strings");
-					String maxString = findMax(sc.next(),sc.next(),sc.next());
+					String maxString = new TestMaximumOfThree<String>(sc.next(),sc.next(),sc.next()).maximum();
 					System.out.println("the largest string based on compareTo is :"+maxString);
 					break;
 				default:
