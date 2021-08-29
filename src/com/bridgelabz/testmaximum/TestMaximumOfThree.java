@@ -24,7 +24,7 @@ public class TestMaximumOfThree {
 		float number3 = sc.nextFloat();
 		
 		Float max = findMax(number1 , number2, number3);
-			
+		
 		System.out.println("the maximum number is : "+max);
 	}
 }
