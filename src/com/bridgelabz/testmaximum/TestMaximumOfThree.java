@@ -4,27 +4,27 @@ import java.util.Scanner;
 
 public class TestMaximumOfThree {
 	
-	private static Float findMax(Float number1, Float number2, Float number3) {
-		Float max = number1;
+	private static String findMax(String str1, String str2, String str3) {
+		String max = str1;
 		
-		if(number2.compareTo(max)>0) {
-			max = number2;
+		if(str2.compareTo(max)>0) {
+			max = str2;
 		}
-		if(number3.compareTo(max)>0) {
-			max = number3;
+		if(str3.compareTo(max)>0) {
+			max = str3;
 		}
 		return max;
 	}
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter Three floating point numbers");
-		float number1 = sc.nextFloat();
-		float number2 = sc.nextFloat();
-		float number3 = sc.nextFloat();
+		System.out.println("Enter three strings");
+		String str1 = sc.next();
+		String str2 = sc.next();
+		String str3 = sc.next();
 		
-		Float max = findMax(number1 , number2, number3);
+		String max = findMax(str1 , str2, str3);
 		
-		System.out.println("the maximum number is : "+max);
+		System.out.println("the maximum string is : "+max);
 	}
 }
