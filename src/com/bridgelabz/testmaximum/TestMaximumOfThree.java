@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class TestMaximumOfThree {
 	
-	private static Integer findMax(Integer number1, Integer number2, Integer number3) {
-		Integer max = number1;
+	private static Float findMax(Float number1, Float number2, Float number3) {
+		Float max = number1;
 		
 		if(number2.compareTo(max)>0) {
 			max = number2;
@@ -18,12 +18,12 @@ public class TestMaximumOfThree {
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter Three numbers");
-		int number1 = sc.nextInt();
-		int number2 = sc.nextInt();
-		int number3 = sc.nextInt();
+		System.out.println("Enter Three floating point numbers");
+		float number1 = sc.nextFloat();
+		float number2 = sc.nextFloat();
+		float number3 = sc.nextFloat();
 		
-		Integer max = findMax(number1 , number2, number3);
+		Float max = findMax(number1 , number2, number3);
 			
 		System.out.println("the maximum number is : "+max);
 	}
